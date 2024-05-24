@@ -20,7 +20,7 @@ def test_subject_list_response_item_contains_price():
     response = requests.get("https://restful-booker.herokuapp.com/booking")
     assert response.json()[0]["price"] is not None
 
-def test_get_bookings():
+def test_subject_list_response_headers_has_content_type():
     response = requests.get("https://restful-booker.herokuapp.com/booking")
     assert response.headers["Content-Type"] == "application/json; charset=utf-8"
 
